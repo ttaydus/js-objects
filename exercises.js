@@ -253,6 +253,26 @@ printOrders(arrayOfObjects);
         to inspect your results.
 */
 
+var sumObj = {
+    a: 10,
+    b: 20,
+    result: undefined,
+}
+
+// console.log(sumObj);
+
+function objectAddition(object){
+     object.result = object.a + object.b;
+
+    return object;
+}
+
+var sumObjResult = objectAddition(sumObj);
+console.log(sumObjResult);
+
+
+
+
 
 /*
 9. Print sum function and add as new key-value
