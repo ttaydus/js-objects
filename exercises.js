@@ -254,8 +254,8 @@ printOrders(arrayOfObjects);
 */
 
 var sumObj = {
-    a: 10,
-    b: 20,
+    a: 11,
+    b: 22,
     result: undefined,
 }
 
@@ -269,9 +269,6 @@ function objectAddition(object){
 
 var sumObjResult = objectAddition(sumObj);
 console.log(sumObjResult);
-
-
-
 
 
 /*
@@ -291,6 +288,26 @@ console.log(sumObjResult);
         **create more** objects and invoke your function multiple times.
  */
 
+function printObj(object){
+    return object.a + ' + ' + object.b + ' = ' + object.result; 
+}
+
+// console.log(printObj(sumObj));
+
+sumObj.output = printObj(sumObj);
+
+console.log(printObj(sumObj));
+console.log(sumObj);
+
+
+sumObj2 = {
+  a: 12,
+  b: 33,
+  result: undefined,
+}
+
+console.log(printObj(sumObj2));
+
 
 /*
 10. Putting stuff in `plainBox`
@@ -301,6 +318,20 @@ console.log(sumObjResult);
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
+
+tenNumberArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+numberContainer = {
+  contents: undefined,
+}
+
+ function putInPlainBox(object){
+   for( var i = 0; i<object.length; i++){
+     numberContainer.contents = object[i];
+   }
+ }
+
+console.log(putInPlainBox(tenNumberArr));
 
 
 /*
@@ -313,6 +344,27 @@ console.log(sumObjResult);
 
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
+
+car1 = {
+  autoTrans: true,
+}
+
+car2 = {
+  autoTrans: false,
+}
+
+function detectingTransmission(object){
+  if(object.autoTrans === true){
+    return 'It\'s automatic!';
+  }else{
+    return 'It ain\'t auto!';
+  }
+}
+
+var isAutomaticTransmission = detectingTransmission(car1);
+console.log(isAutomaticTransmission);
+console.log(detectingTransmission(car2));
+
 
 
 /*
