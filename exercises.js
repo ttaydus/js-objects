@@ -111,7 +111,7 @@ console.log(plainBox);
 var stockCar = {
     model: 'Tesla',
     year: 2014,
-    automaticTransmission: false,
+    autoTrans: false,
     driver: null,
     passengers: [],
 }
@@ -254,22 +254,19 @@ printOrders(arrayOfObjects);
 */
 
 var sumObj = {
-    a: 11,
-    b: 22,
-    result: undefined,
+  a: 3,
+  b: 4,
+  result: undefined,
 }
 
-// console.log(sumObj);
+function objAddition(object){
+  object.result = object.a + object.b;
 
-function objectAddition(object){
-     object.result = object.a + object.b;
-
-    return object;
+  return object
 }
 
-var sumObjResult = objectAddition(sumObj);
+var sumObjResult = (objAddition(sumObj));
 console.log(sumObjResult);
-
 
 /*
 9. Print sum function and add as new key-value
@@ -289,23 +286,19 @@ console.log(sumObjResult);
  */
 
 function printObj(object){
-    return object.a + ' + ' + object.b + ' = ' + object.result; 
+  object.output = object.a + ' + ' + object.b + ' = ' + object.result;
+  return object.output
 }
 
-// console.log(printObj(sumObj));
-
-sumObj.output = printObj(sumObj);
-
 console.log(printObj(sumObj));
-console.log(sumObj);
 
-
-sumObj2 = {
-  a: 12,
-  b: 33,
+var sumObj2 = {
+  a: 10,
+  b: 10,
   result: undefined,
 }
 
+objAddition(sumObj2);
 console.log(printObj(sumObj2));
 
 
@@ -345,11 +338,11 @@ console.log(putInPlainBox(tenNumberArr));
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
-car1 = {
+stockCar1 = {
   autoTrans: true,
 }
 
-car2 = {
+stockCar2 = {
   autoTrans: false,
 }
 
@@ -361,9 +354,11 @@ function detectingTransmission(object){
   }
 }
 
-var isAutomaticTransmission = detectingTransmission(car1);
+var isAutomaticTransmission = detectingTransmission(stockCar1);
 console.log(isAutomaticTransmission);
-console.log(detectingTransmission(car2));
+console.log(detectingTransmission(stockCar2));
+
+
 
 
 
